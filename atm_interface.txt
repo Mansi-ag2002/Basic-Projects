@@ -1,0 +1,56 @@
+package comp_programming;
+
+import java.util.Scanner;
+
+public class atm {
+	int m=0,n=0;
+	public void deposit() {
+		
+		Scanner in=new Scanner(System.in);
+		System.out.println("enter the amount you want to deposit!");
+		 m=in.nextInt();
+		System.out.println("money deposited Successfully!");
+	}
+	public void withdraw() {
+		Scanner in=new Scanner(System.in);
+		
+		System.out.println("enter the amount you want to withdraw!");
+		n=in.nextInt();
+		if (m==0) {
+			System.out.println("cannot withdraw!");
+		}
+		else {
+		System.out.println("money withdrwan successfully!");}
+	}
+	public void display() {
+		int p=m-n;
+		if (m==0 || p<0) {
+			System.out.println("0 balance!");
+		}
+		else {
+		System.out.println("money left in account is:");
+		System.out.println(m-n);}
+	}
+	public static void main(String args[]) {
+		atm obj=new atm();
+		while(true) {
+		System.out.println("enter 1 to deposit money!");
+		System.out.println("enter 2 to withdraw money!");
+		System.out.println("enter 3 to display money!");
+		System.out.println("enter 4 to exit!");
+		
+		 Scanner in= new Scanner(System.in);
+		 System.out.println("enter the choice:");
+		 int choice=in.nextInt();
+		 switch(choice){ 
+		 case 1: obj.deposit();
+		 break;
+		 case 2: obj.withdraw();
+		 break;
+		 case 3: obj.display();
+		 break;
+		 case 4: System.exit(0);}
+		 
+		
+	}
+}}
