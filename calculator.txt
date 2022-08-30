@@ -1,0 +1,93 @@
+package calculator;
+
+import java.util.Scanner;
+
+public class calculator {
+	
+	public void add() {
+		Scanner in=new Scanner(System.in);
+		System.out.println("enter the numbers");
+		int x=in.nextInt();
+		int y=in.nextInt();
+	
+		System.out.println(x+y);
+	}
+	
+	public void difference() {
+		Scanner in=new Scanner(System.in);
+		System.out.println("enter the numbers");
+		int x=in.nextInt();
+		int y=in.nextInt();
+	
+		System.out.println(x-y);
+	}
+	
+	public void product() {
+		Scanner in=new Scanner(System.in);
+		System.out.println("enter the numbers");
+		int x=in.nextInt();
+		int y=in.nextInt();
+	
+		System.out.println(x*y);
+	}
+	
+	public void division() {
+		Scanner in=new Scanner(System.in);
+		System.out.println("enter the numbers");
+		int x=in.nextInt();
+		int y=in.nextInt();
+	
+		System.out.println(x/y);
+	}
+	
+	public void perc() {
+		Scanner in=new Scanner(System.in);
+		System.out.println("enter the numbers");
+		int x=in.nextInt();
+		int y=in.nextInt();
+	
+		System.out.println((x*y)/100);
+		
+	}
+	
+	public void sq() {
+		Scanner in=new Scanner(System.in);
+		System.out.println("enter the number");
+		int x=in.nextInt();
+		
+	
+		System.out.println(x*x);
+	}
+	public static void main(String args[]) {
+		calculator obj=new calculator();
+		while(true) {
+			System.out.println("enter 1 to do addition!");
+			System.out.println("enter 2 to do subtraction!");
+			System.out.println("enter 3 to do multiplication!");
+			System.out.println("enter 4 to do division!");
+			System.out.println("enter 5 to calculate percentage!");
+			System.out.println("enter 6 to calculate square");
+			System.out.println("enter 0 to exit!");
+			
+			 Scanner in= new Scanner(System.in);
+			 System.out.println("enter the choice:");
+			 int choice=in.nextInt();
+			 switch(choice){ 
+			 case 1: obj.add();
+			 break;
+			 case 2: obj.difference();
+			 break;
+			 case 3: obj.product();
+			 break;
+			 case 4:obj.division();
+			 break;
+			 case 5: obj.perc();
+			 break;
+			 case 6: obj.sq();
+			 break;
+			 case 0: System.exit(0);}
+			 
+			
+		}
+	}
+}
